@@ -40,3 +40,27 @@ python web_interface.py
 ```
 
 После запуска перейдите в браузере по адресу [http://localhost:5000](http://localhost:5000) и загрузите исходный Excel-файл. При необходимости добавьте шаблон `Таблица1.xlsx`, укажите ИНН и регион. После отправки формы результат автоматически скачивается в формате 103.
+
+## Выгрузка проекта на GitHub
+
+1. Создайте новый пустой репозиторий на [github.com](https://github.com) и скопируйте адрес (например, `https://github.com/<user>/exel.git`).
+2. Убедитесь, что в каталоге проекта инициализирован git-репозиторий и добавлены все файлы:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+3. Добавьте удалённый репозиторий и отправьте в него текущую ветку:
+   ```bash
+   git remote add origin https://github.com/<user>/exel.git
+   git branch -M main
+   git push -u origin main
+   ```
+4. При необходимости создавайте новые ветки для доработок и публикуйте их:
+   ```bash
+   git checkout -b feature/web-upload
+   # ... изменения ...
+   git commit -am "Добавлен веб-интерфейс"
+   git push -u origin feature/web-upload
+   ```
+5. Чтобы обновить основной репозиторий, выполните merge или создайте Pull Request через интерфейс GitHub.
